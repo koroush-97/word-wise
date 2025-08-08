@@ -1,3 +1,5 @@
 export default function App() {
-  return <div>App</div>;
+  const x = 23;
+
+  return <h1> WorldWize </h1>;
 }
