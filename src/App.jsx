@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Product from "./pages/Product";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="" />
+        <Route path="product" element={<Product />} />
       </Routes>
     </BrowserRouter>
   );
