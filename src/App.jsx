@@ -1,5 +1,5 @@
-export default function App() {
-  const x = 23;
-
+function App() {
   return <h1> WorldWize </h1>;
 }
+
+export default App;
