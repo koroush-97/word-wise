@@ -14,6 +14,9 @@ export default function PageNav() {
         <li>
           <NavLink to="/product"> product </NavLink>
         </li>
+        <li>
+          <NavLink to="/login"> product </NavLink>
+        </li>
       </ul>
     </nav>
   );
