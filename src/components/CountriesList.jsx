@@ -10,10 +10,13 @@ export default function CountriesList({ cities, isLoading }) {
     return (
       <Message message="Add your first city by clicking on a city on the map" />
     );
+
+  const countries = [];
+
   return (
     <ul className={styles.countryList}>
-      {cities.map((city) => (
-        <CityItem city={city} key={city.id} />
+      {countries.map((country) => (
+        <countryItem country={country} key={country.id} />
       ))}
     </ul>
   );
