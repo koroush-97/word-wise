@@ -15,8 +15,7 @@ export function convertToEmoji(countryCode) {
 }
 
 function Form() {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
@@ -55,7 +54,9 @@ function Form() {
 
       <div className={styles.buttons}>
         <Button type="primary">Add</Button>
-        <Button type="back" onClick={} >&larr; Back</Button>
+        <Button type="back" onClick={() => navigate()}>
+          &larr; Back
+        </Button>
       </div>
     </form>
   );
