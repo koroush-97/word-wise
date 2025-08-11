@@ -1,6 +1,5 @@
 import styles from "./CountryList.module.css";
 import Spinner from "../components/Spinner";
-import CityItem from "../components/CityItem";
 import Message from "../components/Message";
 import CountryItem from "./CountryItem";
 
