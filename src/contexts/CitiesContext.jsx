@@ -37,4 +37,8 @@ function CitiesProvider({ children }) {
   );
 }
 
+// @ hook of cities context
+
+function useCities() {}
+
 export { CitiesProvider };
