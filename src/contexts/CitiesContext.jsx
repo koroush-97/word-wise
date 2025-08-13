@@ -25,5 +25,14 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  return <CitiesContext.Provider>{children}</CitiesContext.Provider>;
+  return (
+    <CitiesContext.Provider
+      value={{
+        cities,
+        isLoading,
+      }}
+    >
+      {children}
+    </CitiesContext.Provider>
+  );
 }
