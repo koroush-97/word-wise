@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Product from "./pages/Product";
@@ -13,9 +12,6 @@ import City from "./components/City";
 import Form from "./components/Form";
 
 function App() {
-  const [cities, setCities] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
   return (
     <BrowserRouter>
       <Routes>
