@@ -24,4 +24,6 @@ function CitiesProvider({ children }) {
     }
     fetchCities();
   }, []);
+
+  return <CitiesContext.Provider>{children}</CitiesContext.Provider>;
 }
