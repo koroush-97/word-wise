@@ -1,4 +1,8 @@
+// @ hooks and deoendencies
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// @context api
+import { CitiesProvider } from "./contexts/CitiesContext";
+// @ components
 
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
