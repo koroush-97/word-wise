@@ -10,7 +10,7 @@ export default function Map() {
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const lat = searchParams.get("lat");
+  const mapLat = searchParams.get("lat");
   const lng = searchParams.get("lng");
   return (
     <div className={styles.mapContainer} onClick={() => navigate("form")}>
