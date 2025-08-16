@@ -16,7 +16,7 @@ function Map() {
     <div className={styles.mapContainer} onClick={() => navigate("form")}>
       <MapContainer
         className={styles.map}
-        center={[mapLat, mapLng]}
+        center={mapPosition}
         zoom={6}
         scrollWheelZoom={true}
       >
@@ -34,6 +34,7 @@ function Map() {
             </Popup>
           </Marker>
         ))}
+        <ChangeCenter position={[mapLat || 40, mapLng || 0]} />
       </MapContainer>
     </div>
   );
