@@ -12,12 +12,12 @@ export default function Map() {
   const lng = searchParams.get("lng");
   return (
     <div className={styles.mapContainer} onClick={() => navigate("form")}>
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer center={mapPosition} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
+        <Marker position={mapPosition}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
