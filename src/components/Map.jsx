@@ -16,7 +16,7 @@ export default function Map() {
     <div className={styles.mapContainer} onClick={() => navigate("form")}>
       <MapContainer
         className={styles.map}
-        center={mapPosition}
+        center={[mapLat, mapLng]}
         zoom={13}
         scrollWheelZoom={true}
       >
