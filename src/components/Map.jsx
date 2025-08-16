@@ -7,7 +7,7 @@ import { useCities } from "../contexts/CitiesContext";
 export default function Map() {
   const navigate = useNavigate();
   const { cities } = useCities();
-  const [mapPosition, setMapPosition] = useState([35.6892, 51.389]);
+  const [mapPosition, setMapPosition] = useState([40, 0]);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const lat = searchParams.get("lat");
@@ -30,7 +30,7 @@ export default function Map() {
             key={city.id}
           >
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              <span>{city.emoji} </span> , <span>{city.cityName}</span>
             </Popup>
           </Marker>
         ))}
