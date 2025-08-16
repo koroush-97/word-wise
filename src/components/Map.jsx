@@ -4,20 +4,20 @@ import styles from "./Map.module.css";
 import { useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
 
-export default function Map() {
+function Map() {
   const navigate = useNavigate();
   const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+  const mapLat = Number(searchParams.get("lat"));
+  const mapLng = Number(searchParams.get("lng"));
   return (
     <div className={styles.mapContainer} onClick={() => navigate("form")}>
       <MapContainer
         className={styles.map}
         center={[mapLat, mapLng]}
-        zoom={13}
+        zoom={6}
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -38,3 +38,5 @@ export default function Map() {
     </div>
   );
 }
+
+export default Map;
