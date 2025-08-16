@@ -9,7 +9,7 @@ function Map() {
   const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const mapLat = Number(searchParams.get("lat"));
   const mapLng = Number(searchParams.get("lng"));
 
@@ -42,7 +42,7 @@ function Map() {
             </Popup>
           </Marker>
         ))}
-        <ChangeCenter position={[mapLat || 40, mapLng || 0]} />
+        <ChangeCenter position={mapPosition} />
       </MapContainer>
     </div>
   );
