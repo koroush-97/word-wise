@@ -25,7 +25,10 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {cities.map((city) => (
-          <Marker position={mapPosition}>
+          <Marker
+            position={[city.position.lat, city.position.lng]}
+            key={city.id}
+          >
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
