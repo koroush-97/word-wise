@@ -7,6 +7,7 @@ const CitiesContext = createContext();
 function CitiesProvider({ children }) {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [currentCity, setcurrentCity] = useState({});
 
   useEffect(function () {
     async function fetchCities() {
@@ -30,6 +31,7 @@ function CitiesProvider({ children }) {
       value={{
         cities,
         isLoading,
+        currentCity,
       }}
     >
       {children}
