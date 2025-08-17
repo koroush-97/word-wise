@@ -3,6 +3,7 @@ import { useParams, useSearchParams, Navigate } from "react-router-dom";
 import styles from "./City.module.css";
 import { useCities } from "../contexts/CitiesContext";
 import { useEffect } from "react";
+import Spinner from "./Spinner";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -14,32 +15,19 @@ const formatDate = (date) =>
 
 function City() {
   const { id } = useParams();
-  const { getCity, currentCity } = useCities();
+  const { getCity, currentCity, isLoading } = useCities();
   // TEMP DATA
 
   useEffect(
     function () {
       getCity(id);
     },
-    [id, getCity]
+    [id]
   );
 
   const { cityName, emoji, date, notes } = currentCity;
 
-  // return (
-  //   <>
-  //     <h3> City Name </h3>
-  //     <h1>
-  //       {" "}
-  //       {emoji} , {cityName}
-  //     </h1>
-  //     <p>You went to {cityName} on</p>
-  //     <h3>{date}</h3>
-  //     <h3>your note</h3>
-  //     <p>{notes}</p>
-  //     <Navigate to="/cities"> back </Navigate>
-  //   </>
-  // );
+  if (isLoading) return <Spinner />;
 
   return (
     <div className={styles.city}>
