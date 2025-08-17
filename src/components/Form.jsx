@@ -39,8 +39,9 @@ function Form() {
           setIsLoadingGeocoding(true);
           setGeocodingError("");
           const res = await fetch(
-            ` ${BASE_URL}?latitude=${lat}&longitude=${lng} `
+            `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
+
           const data = await res.json();
 
           if (!data.countryCode)
@@ -76,7 +77,7 @@ function Form() {
       position: { lat, lng },
     };
 
-    console.log(newCity);
+    console.log("newCity :", newCity);
   }
 
   if (isLoadingGeocoding) return <Spinner />;
@@ -133,6 +134,7 @@ function Form() {
 
       <div className={styles.buttons}>
         <Button type="primary">Add</Button>
+
         <BackButton />
       </div>
     </form>
