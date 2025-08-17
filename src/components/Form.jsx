@@ -35,6 +35,12 @@ function Form() {
             ` ${BASE_URL}?latitude=${lat}&longitude=${lng} `
           );
           const data = await res.json();
+
+          if (!data.countryCode)
+            throw new Error(
+              "THAT DOESN'T SEEM TO BE CITY , CLICK SOMEWHERE ELSE"
+            );
+
           setCityName(data.city || data.locality || "");
           setCountry(data.countryName);
           setEmoji(convertToEmoji(data.countryCode));
