@@ -42,3 +42,38 @@
   font-family: inherit;
   font-size: 1.2rem;
 }
+
+.input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+
+.calendar {
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+}
+
+.react-datepicker__day {
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f3f4f6;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #4f46e5 !important;
+  color: white !important;
+  border-radius: 6px;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+  border: 1px solid #4f46e5;
+  border-radius: 6px;
+}

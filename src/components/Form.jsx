@@ -93,11 +93,19 @@ function Form() {
           onChange={(e) => setDate(e.target.value)}
           value={date}
         /> */}
+        {/* <DatePicker
+          id="date"
+          onChange={(date) => setDate(date)}
+          selected={date}
+          dateFormat="dd/MM/yyyy"
+        /> */}
         <DatePicker
           id="date"
           onChange={(date) => setDate(date)}
           selected={date}
           dateFormat="dd/MM/yyyy"
+          className={styles.input}
+          calendarClassName={styles.calendar}
         />
       </div>
 
