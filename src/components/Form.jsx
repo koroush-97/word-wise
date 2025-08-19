@@ -82,7 +82,7 @@ function Form() {
     };
 
     createCity(newCity);
-    navigate("/app");
+    navigate("/app/cities");
   }
 
   if (isLoadingGeocoding) return <Spinner />;
