@@ -35,66 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
-    },
-    {
-      "id": "890a",
-      "cityName": "Montijo",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2025-08-19T08:10:13.530Z",
-      "notes": "",
-      "position": {
-        "lat": 38.70571347043786,
-        "lng": -8.974772907092985
-      }
-    },
-    {
-      "id": "6fd9",
-      "cityName": "Moita",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2025-08-19T08:10:13.530Z",
-      "notes": "",
-      "position": {
-        "lat": 38.67461033841147,
-        "lng": -9.007749260372961
-      }
-    },
-    {
-      "id": "e988",
-      "cityName": "Miranda do Corvo",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2025-08-19T08:16:03.713Z",
-      "notes": "test",
-      "position": {
-        "lat": 40.141947823722354,
-        "lng": -8.323991292105251
-      }
-    },
-    {
-      "id": "1844",
-      "cityName": "Santovenia de la Valdoncina",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-08-19T08:22:48.256Z",
-      "notes": "thats testing",
-      "position": {
-        "lat": 42.55669488749801,
-        "lng": -5.5971581939797534
-      }
-    },
-    {
-      "id": "9176",
-      "cityName": "Lugo",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-08-19T08:51:54.860Z",
-      "notes": "awsem",
-      "position": {
-        "lat": 43.051353236464976,
-        "lng": -7.537830786896694
-      }
     }
   ]
 }
