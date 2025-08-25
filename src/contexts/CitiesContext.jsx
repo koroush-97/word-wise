@@ -120,7 +120,10 @@ function CitiesProvider({ children }) {
 
       dispatch({ type: "city/deleted", payload: id });
     } catch {
-      alert("There was an error Deleting city...");
+      dispatch({
+        type: "rejected",
+        payload: "There was an error deleting city...",
+      });
     }
   }
 
