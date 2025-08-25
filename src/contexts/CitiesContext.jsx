@@ -52,8 +52,8 @@ function CitiesProvider({ children }) {
 
   useEffect(function () {
     async function fetchCities() {
+      dispatch({ type: "loading" });
       try {
-        dispatch({ type: "loading" });
         const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         dispatch({ type: "cities/loaded", payload: data });
@@ -68,21 +68,19 @@ function CitiesProvider({ children }) {
   }, []);
 
   async function getCity(id) {
+    dispatch({ type: "loading" });
     try {
-      setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities/${id}`);
       const data = await res.json();
-      setcurrentCity(data);
+      dispatch({ type: "city/loaded", payload: data });
     } catch {
       alert("There was an error loading data...");
-    } finally {
-      setIsLoading(false);
     }
   }
 
   async function createCity(newCity) {
+    dispatch({ type: "loading" });
     try {
-      setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities`, {
         method: "POST",
         body: JSON.stringify(newCity),
@@ -92,17 +90,14 @@ function CitiesProvider({ children }) {
       });
       const data = await res.json();
       setCities((cities) => [...cities, data]);
-      console.log(data);
     } catch {
       alert("There was an error Creating city...");
-    } finally {
-      setIsLoading(false);
     }
   }
 
   async function deleteCity(id) {
+    dispatch({ type: "loading" });
     try {
-      setIsLoading(true);
       await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
@@ -110,8 +105,6 @@ function CitiesProvider({ children }) {
       setCities((cities) => cities.filter((city) => city.id !== id));
     } catch {
       alert("There was an error Deleting city...");
-    } finally {
-      setIsLoading(false);
     }
   }
 
