@@ -53,4 +53,4 @@ function useAuth() {
     throw new Error(" AuthContext was used outside AuthProvider");
 }
 
-export { AuthContext, useAuth };
+export { AuthProvider, useAuth };
