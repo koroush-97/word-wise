@@ -46,7 +46,7 @@ function CitiesProvider({ children }) {
   useEffect(function () {
     async function fetchCities() {
       try {
-        setIsLoading(true);
+        dispatch({ type: "loading" });
         const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         setCities(data);
