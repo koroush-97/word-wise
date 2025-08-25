@@ -1,4 +1,10 @@
-import { createContext, useState, useEffect, useContext, useReducer } from "react";
+import {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  useReducer,
+} from "react";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -6,7 +12,7 @@ const CitiesContext = createContext();
 
 const initialState = {
   cities: [],
-  inLoading: false,
+  isLoading: false,
   currentCity: {},
 };
 
@@ -17,9 +23,10 @@ function CitiesProvider({ children }) {
   // const [isLoading, setIsLoading] = useState(false);
   // const [currentCity, setcurrentCity] = useState({});
 
-  const CitiesProvider({children}){
-    const [state , dispatch] = useReducer(reducer ,initialState )
-  }
+  const [{ cities, isLoading, currentCity }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   useEffect(function () {
     async function fetchCities() {
