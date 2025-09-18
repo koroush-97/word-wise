@@ -21,20 +21,3 @@ export default function Button({ children, onClick, type }) {
 //   );
 // }
 // import styles from "./Button.module.css";
-
-// export default function Button({
-//   children,
-//   onClick,
-//   type = "button",
-//   variant,
-// }) {
-//   return (
-//     <button
-//       onClick={onClick}
-//       type={type}
-//       className={`${styles.btn} ${variant ? styles[variant] : ""}`}
-//     >
-//       {children}
-//     </button>
-//   );
-// }
