@@ -78,7 +78,7 @@ function ChangeCenter({ position }) {
   map.setView(position);
   return null;
 }
-
+// this function create for located with click
 function DetectClick() {
   const navigate = useNavigate();
 
