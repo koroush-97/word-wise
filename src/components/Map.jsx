@@ -72,7 +72,7 @@ function Map() {
     </div>
   );
 }
-
+// this function create for change center city when scroll page
 function ChangeCenter({ position }) {
   const map = useMap();
   map.setView(position);
